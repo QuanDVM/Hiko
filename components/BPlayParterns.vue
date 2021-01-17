@@ -11,13 +11,11 @@
           :textCenter="false"
         />
       </div>
-      <div class="parterns__img">
-        <group-image 
-          :styleImage="{ width: '190px'}"
-          :listImage="['hogaming', 'iovation', 'sbtech', 'seon', 'vivo']"
-          :islistImageCenter="true"
-        />
-      </div>
+      <group-image 
+        :styleImage="{ width: '150px'}"
+        :listImage="['hogaming', 'iovation', 'sbtech', 'seon', 'vivo']"
+        :islistImageCenter="true"
+      />
     </div>
   </div>
 </template>
@@ -44,8 +42,8 @@ export default {
   }
 
   &__description {
-    width: 535px;
     margin: 0 auto;
+    padding: 0 60px;
   }
 
   &__img {

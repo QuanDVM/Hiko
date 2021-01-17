@@ -3,6 +3,9 @@
     <div class="header__action">
       <img src="../static/images/logo.png" alt="logo" class="header__logo">
       <b-play-menu/>
+      <div>
+        <item-dropdown :options="options" />
+      </div>
     </div>
     <h1 class="header__heading">CASINO<br/>PLAYGAME</h1>
     <item-scroll :styleScroll="{
@@ -20,12 +23,19 @@
 <script>
 import BPlayMenu from '~/components/BPlayMenu.vue';
 import ItemScroll from '~/components/items/ItemScroll.vue';
+import ItemDropdown from '~/components/common/ItemDropdown.vue';
 
 export default {
   components: {
     BPlayMenu,
     ItemScroll,
+    ItemDropdown
   },
+  data() {
+    return {
+      options: ['<img src="/images/flag.png" alt="logo" style="margin-right: 5px">ENG']
+    }
+  }
 }
 </script>
 
@@ -41,6 +51,7 @@ export default {
     display: flex;
     max-width: 900px;
     justify-content: space-between;
+    align-items: center;
     margin: 0 auto;
     padding: 10px 0;
   }
@@ -62,6 +73,12 @@ export default {
   &__logo {
     width: 152px;
   }
+}
+
+.flag {
+  background: #fff;
+  margin-right: 5px;
+  border-radius: 50%;
 }
 
 @keyframes fadeIn {

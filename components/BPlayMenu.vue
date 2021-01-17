@@ -20,7 +20,7 @@
     padding: 10px 0;
     font-weight: bold;
     font-size: 16px;
-    margin-left: 53px;
+    margin-left: 20px;
 
     &:first-child {
       border-bottom: 2px solid #F41616;

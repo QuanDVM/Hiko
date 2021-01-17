@@ -167,6 +167,7 @@ export default {
       border-top: 1px solid #222330;
       font-size: 12px;
       color: #CECECE;
+      padding: 10px 0;
     }
   }
 }

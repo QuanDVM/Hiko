@@ -8,8 +8,10 @@
         :textCenter="false"
         :isDisplayHorizontal="true"
       />
-      <list-game :listGame="listGame"/>
-      <swiper-game :listGame="listGame"/>
+      <div class="product__listGame">
+        <list-game :listGame="listGame"/>
+        <swiper-game :listGame="listGame"/>
+      </div>
     </div>
   </div>
 </template>
@@ -89,6 +91,10 @@ export default {
     max-width: 900px;
     margin: 0 auto;
   }
+
+  &__listGame {
+    margin-top: 50px;
+  }
 }
 
 @media only screen and (max-width: 480px) and (min-width: 320px){
@@ -97,6 +103,10 @@ export default {
     background-image: url("../static/images/backgroudProduct.png"), url("../static/images/backgroudWaveSP.png");
     background-size: 100%;
     background-repeat: no-repeat;
+
+    &__listGame {
+      margin-left: 10px;
+    }
   }
 }
 </style>
