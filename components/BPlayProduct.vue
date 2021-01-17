@@ -1,23 +1,28 @@
 <template>
   <div class="product">
-    <info-description
-      nameCompany="BPLAY GAME"
-      title="OUR PRODUCTS"
-      text="BPlay’s high quality iGaming Platform offers a complete solution for your casino. Get the full White Label turnkey solution or the Seamless API with our comprehensive selection of games. Through our global network of premium partners such as Vivo Gaming, SBTech and HoGaming you will have access to the best Live Casino, Sportsbook, Slots, Table Games, Number Games and Fishing Games on the market."
-      :textCenter="false"
-      :isDisplayHorizontal="true"
-    />
-    <list-game :listGame="listGame" />
+    <div class="product__info">
+      <info-description
+        nameCompany="BPLAY GAME"
+        title="OUR PRODUCTS"
+        text="BPlay’s high quality iGaming Platform offers a complete solution for your casino. Get the full White Label turnkey solution or the Seamless API with our comprehensive selection of games. Through our global network of premium partners such as Vivo Gaming, SBTech and HoGaming you will have access to the best Live Casino, Sportsbook, Slots, Table Games, Number Games and Fishing Games on the market."
+        :textCenter="false"
+        :isDisplayHorizontal="true"
+      />
+      <list-game :listGame="listGame"/>
+      <swiper-game :listGame="listGame"/>
+    </div>
   </div>
 </template>
 <script>
 import InfoDescription from '~/components/InfoDescription.vue';
 import ListGame from '~/components/items/ListGame.vue';
+import SwiperGame from '~/components/items/SwiperGame.vue';
 
 export default {
   components: {
     InfoDescription,
-    ListGame
+    ListGame,
+    SwiperGame
   },
   data() {
     return {
@@ -74,11 +79,18 @@ export default {
 <style lang="scss" scoped>
 .product {
   background-image: url("../static/images/backgroudProduct.png"), url("../static/images/backgroudWave.png");
+  background-position: left top, left bottom;;
   background-size: 100%;
   background-repeat: no-repeat;
-  padding: 228px 260px 330px;
+  padding: 95px 0 300px;
   background-color: #15161e;
+
+  &__info {
+    max-width: 900px;
+    margin: 0 auto;
+  }
 }
+
 @media only screen and (max-width: 480px) and (min-width: 320px){
   .product {
     padding: 20px 0;

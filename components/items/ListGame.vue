@@ -1,5 +1,5 @@
 <template>
-  <div class="listGame">
+  <div class="listGame isPc">
     <item-game :game="game" v-for="(game, index) in listGame" :key="index" />
   </div>
 </template>
@@ -32,6 +32,10 @@ export default {
 @media only screen and (max-width: 480px) and (min-width: 320px){
   .listGame {
     grid-template-columns: none;
+
+    &.isPc {
+      display: none;
+    }
   }
 }
 </style>

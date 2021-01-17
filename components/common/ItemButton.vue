@@ -1,5 +1,5 @@
 <template>
-  <button class="buttonGame" :disabled="disabled" :style="style"><slot></slot></button>
+  <button class="buttonGame" :disabled="disabled" :style="styles"><slot></slot></button>
 </template>
 
 <script>
@@ -10,7 +10,7 @@ export default {
       required: false,
       default: false,
     },
-    style: {
+    styles: {
       type: Boolean,
       required: false
     }

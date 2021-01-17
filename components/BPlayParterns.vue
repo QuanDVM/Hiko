@@ -36,6 +36,7 @@ export default {
 <style lang="scss" scoped>
 .parterns {
   display: flex;
+  align-items: center;
 
   &__info {
     margin-left: 60px;

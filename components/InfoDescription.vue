@@ -2,7 +2,7 @@
   <div
     :class="['infoDescription', {'isDisplayHorizontal': isDisplayHorizontal, 'textCenter': textCenter}]"
   >
-    <div>
+    <div class="infoDescription__areaInfo">
       <h5 class="infoDescription__nameCompany">{{ nameCompany }}</h5>
       <h3 class="infoDescription__title">{{ title }}</h3>
     </div>
@@ -76,9 +76,13 @@ export default {
 
       &__text {
         margin: 0;
-        margin-left: 54px;
+        margin-left: 80px;
       }
     }
+  }
+
+  &__areaInfo {
+    flex-shrink: 0;
   }
 }
 
