@@ -78,6 +78,21 @@ export default {
     opacity: 1;
   }
 }
+
+@keyframes fadeIn {
+  0% {
+    top: 55%;
+    opacity: 0;
+  }
+  50% {
+    top: 48%;
+    opacity: 0.8;
+  }
+  100% {
+    top: 50%;
+    opacity: 1;
+  }
+}
 @media only screen and (max-width: 480px) and (min-width: 320px){
   .header {
     background-image: url("../static/images/bannerSP.png");
@@ -90,6 +105,7 @@ export default {
 
     &__heading {
       font-size: 36px;
+      top: 35%;
     }
   }
 }
