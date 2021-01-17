@@ -3,7 +3,7 @@
     <div class="header__action">
       <img src="../static/images/logo.png" alt="logo" class="header__logo">
       <b-play-menu/>
-      <div>
+      <div class="isPc">
         <item-dropdown :options="options" />
       </div>
     </div>
@@ -75,10 +75,8 @@ export default {
   }
 }
 
-.flag {
-  background: #fff;
-  margin-right: 5px;
-  border-radius: 50%;
+.isPc {
+  display: block;
 }
 
 @keyframes fadeIn {
@@ -124,6 +122,10 @@ export default {
       font-size: 36px;
       top: 35%;
     }
+  }
+
+  .isPc {
+    display: none;
   }
 }
 </style>
