@@ -1,7 +1,22 @@
 <template>
-  <button class="buttonGame"><slot></slot></button>
+  <button class="buttonGame" :disabled="disabled" :style="style"><slot></slot></button>
 </template>
 
+<script>
+export default {
+  props: {
+    disabled: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
+    style: {
+      type: Boolean,
+      required: false
+    }
+  }
+}
+</script>
 <style scoped>
 .buttonGame {
   width: 170px;
@@ -13,6 +28,5 @@
   border: none;
   font-size: 16px;
   color: #FFFDF1;
-  margin-top: 26px;
 }
 </style>

@@ -106,11 +106,11 @@ export default {
   }
 
   .labelExp {
-    bottom: 0;
+    bottom: auto;
     left: 50%;
-    top: 50%;
+    top: 75%;
     transform: translate(-50%, -50%);
-    padding: 0 35px;
+    padding: 0 35px 20px;
   }
 }
 </style>
